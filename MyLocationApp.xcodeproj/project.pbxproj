@@ -99,9 +99,11 @@
 		17A8019627FCA04700132340 /* MyLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				17A801C927FCC5E800132340 /* Model */,
+				17A801C827FCC5DF00132340 /* ViewModel */,
+				17A801C727FCC5D200132340 /* View */,
 				17A8019727FCA04700132340 /* AppDelegate.swift */,
 				17A8019927FCA04700132340 /* SceneDelegate.swift */,
-				17A8019B27FCA04700132340 /* ViewController.swift */,
 				17A8019D27FCA04700132340 /* Main.storyboard */,
 				17A801A027FCA04A00132340 /* Assets.xcassets */,
 				17A801A227FCA04A00132340 /* LaunchScreen.storyboard */,
@@ -125,6 +127,28 @@
 				17A801BA27FCA04A00132340 /* MyLocationAppUITestsLaunchTests.swift */,
 			);
 			path = MyLocationAppUITests;
+			sourceTree = "<group>";
+		};
+		17A801C727FCC5D200132340 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17A8019B27FCA04700132340 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17A801C827FCC5DF00132340 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17A801C927FCC5E800132340 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
