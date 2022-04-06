@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		17A8019827FCA04700132340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019727FCA04700132340 /* AppDelegate.swift */; };
 		17A8019A27FCA04700132340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019927FCA04700132340 /* SceneDelegate.swift */; };
-		17A8019C27FCA04700132340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019B27FCA04700132340 /* ViewController.swift */; };
+		17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019B27FCA04700132340 /* LocationListViewController.swift */; };
 		17A8019F27FCA04700132340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A8019D27FCA04700132340 /* Main.storyboard */; };
 		17A801A127FCA04A00132340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A801A027FCA04A00132340 /* Assets.xcassets */; };
 		17A801A427FCA04A00132340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A801A227FCA04A00132340 /* LaunchScreen.storyboard */; };
 		17A801AF27FCA04A00132340 /* MyLocationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801AE27FCA04A00132340 /* MyLocationAppTests.swift */; };
 		17A801B927FCA04A00132340 /* MyLocationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801B827FCA04A00132340 /* MyLocationAppUITests.swift */; };
 		17A801BB27FCA04A00132340 /* MyLocationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801BA27FCA04A00132340 /* MyLocationAppUITestsLaunchTests.swift */; };
+		17A801CC27FCC8D700132340 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801CB27FCC8D700132340 /* HttpUtility.swift */; };
+		17A801CF27FCCBB800132340 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801CE27FCCBB700132340 /* LocationResponse.swift */; };
+		17A801D127FCCF4200132340 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801D027FCCF4200132340 /* LocationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		17A8019427FCA04700132340 /* MyLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A8019727FCA04700132340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A8019927FCA04700132340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		17A8019B27FCA04700132340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17A8019B27FCA04700132340 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		17A8019E27FCA04700132340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17A801A027FCA04A00132340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A801A327FCA04A00132340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		17A801B427FCA04A00132340 /* MyLocationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A801B827FCA04A00132340 /* MyLocationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationAppUITests.swift; sourceTree = "<group>"; };
 		17A801BA27FCA04A00132340 /* MyLocationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		17A801CB27FCC8D700132340 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		17A801CE27FCCBB700132340 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		17A801D027FCCF4200132340 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		17A8019627FCA04700132340 /* MyLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				17A801CA27FCC8B600132340 /* Network */,
 				17A801C927FCC5E800132340 /* Model */,
 				17A801C827FCC5DF00132340 /* ViewModel */,
 				17A801C727FCC5D200132340 /* View */,
@@ -132,7 +139,7 @@
 		17A801C727FCC5D200132340 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				17A8019B27FCA04700132340 /* ViewController.swift */,
+				17A8019B27FCA04700132340 /* LocationListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		17A801C827FCC5DF00132340 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				17A801D027FCCF4200132340 /* LocationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,8 +155,25 @@
 		17A801C927FCC5E800132340 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17A801CD27FCC94E00132340 /* Response */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		17A801CA27FCC8B600132340 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				17A801CB27FCC8D700132340 /* HttpUtility.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		17A801CD27FCC94E00132340 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				17A801CE27FCCBB700132340 /* LocationResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A8019C27FCA04700132340 /* ViewController.swift in Sources */,
+				17A801CC27FCC8D700132340 /* HttpUtility.swift in Sources */,
+				17A801D127FCCF4200132340 /* LocationsViewModel.swift in Sources */,
+				17A801CF27FCCBB800132340 /* LocationResponse.swift in Sources */,
+				17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */,
 				17A8019827FCA04700132340 /* AppDelegate.swift in Sources */,
 				17A8019A27FCA04700132340 /* SceneDelegate.swift in Sources */,
 			);
