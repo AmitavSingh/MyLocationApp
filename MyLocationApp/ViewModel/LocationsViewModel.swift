@@ -18,7 +18,9 @@ class LocationsViewModel
     {
         let httpUtility = HttpUtility()
         httpUtility.getLocations { (locationApiResponse) in
+            DispatchQueue.main.async {
                 self.delegate?.didReceiveLocationsResponse(locationResponse: locationApiResponse)
+            }
         }
     }
 }

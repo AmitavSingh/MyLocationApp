@@ -19,6 +19,9 @@
 		17A801CC27FCC8D700132340 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801CB27FCC8D700132340 /* HttpUtility.swift */; };
 		17A801CF27FCCBB800132340 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801CE27FCCBB700132340 /* LocationResponse.swift */; };
 		17A801D127FCCF4200132340 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801D027FCCF4200132340 /* LocationsViewModel.swift */; };
+		17A801D627FD9E0800132340 /* LocationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801D427FD9E0700132340 /* LocationCellTableViewCell.swift */; };
+		17A801D727FD9E0800132340 /* LocationCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A801D527FD9E0800132340 /* LocationCellTableViewCell.xib */; };
+		17A801E127FDE26F00132340 /* LocationCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A801E027FDE26F00132340 /* LocationCaptureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		17A801CB27FCC8D700132340 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		17A801CE27FCCBB700132340 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 		17A801D027FCCF4200132340 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		17A801D427FD9E0700132340 /* LocationCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellTableViewCell.swift; sourceTree = "<group>"; };
+		17A801D527FD9E0800132340 /* LocationCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCellTableViewCell.xib; sourceTree = "<group>"; };
+		17A801E027FDE26F00132340 /* LocationCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCaptureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		17A8019627FCA04700132340 /* MyLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				17A801D327FD9DBD00132340 /* Cell */,
 				17A801CA27FCC8B600132340 /* Network */,
 				17A801C927FCC5E800132340 /* Model */,
 				17A801C827FCC5DF00132340 /* ViewModel */,
@@ -140,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				17A8019B27FCA04700132340 /* LocationListViewController.swift */,
+				17A801E027FDE26F00132340 /* LocationCaptureViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +182,15 @@
 				17A801CE27FCCBB700132340 /* LocationResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		17A801D327FD9DBD00132340 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				17A801D427FD9E0700132340 /* LocationCellTableViewCell.swift */,
+				17A801D527FD9E0800132340 /* LocationCellTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +299,7 @@
 			files = (
 				17A801A427FCA04A00132340 /* LaunchScreen.storyboard in Resources */,
 				17A801A127FCA04A00132340 /* Assets.xcassets in Resources */,
+				17A801D727FD9E0800132340 /* LocationCellTableViewCell.xib in Resources */,
 				17A8019F27FCA04700132340 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +327,8 @@
 			files = (
 				17A801CC27FCC8D700132340 /* HttpUtility.swift in Sources */,
 				17A801D127FCCF4200132340 /* LocationsViewModel.swift in Sources */,
+				17A801E127FDE26F00132340 /* LocationCaptureViewController.swift in Sources */,
+				17A801D627FD9E0800132340 /* LocationCellTableViewCell.swift in Sources */,
 				17A801CF27FCCBB800132340 /* LocationResponse.swift in Sources */,
 				17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */,
 				17A8019827FCA04700132340 /* AppDelegate.swift in Sources */,

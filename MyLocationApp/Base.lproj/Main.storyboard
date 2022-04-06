@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K63-ck-8Xx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -15,16 +15,158 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-A0-qZl">
+                                <rect key="frame" x="90" y="798" width="234.5" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter Location Manually">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didClickEnterLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHu-y4-2yO"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KpL-Py-LSy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="700"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bvv-A0-qZl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRw-it-LLi"/>
+                            <constraint firstItem="KpL-Py-LSy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hep-lj-bbJ"/>
+                            <constraint firstItem="bvv-A0-qZl" firstAttribute="top" secondItem="KpL-Py-LSy" secondAttribute="bottom" constant="10" id="VK4-7f-0y5"/>
+                            <constraint firstItem="KpL-Py-LSy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWB-90-QeX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bvv-A0-qZl" secondAttribute="bottom" constant="25" id="yaq-iE-lIc"/>
+                            <constraint firstItem="KpL-Py-LSy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yyf-ex-5iX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h0t-5w-p2s"/>
+                    <connections>
+                        <outlet property="tableView" destination="KpL-Py-LSy" id="VMM-xE-XMA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="66"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="65.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xDO-Ve-mMl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K63-ck-8Xx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xhh-A6-r3x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="97N-TX-FXD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ApR-4R-63m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="65.625"/>
+        </scene>
+        <!--Location Capture View Controller-->
+        <scene sceneID="A30-J7-9tg">
+            <objects>
+                <viewController storyboardIdentifier="LocationCaptureViewController" id="au6-KS-Ine" customClass="LocationCaptureViewController" customModule="MyLocationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdQ-1N-qHg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="INm-5p-t0v">
+                                <rect key="frame" x="87" y="124.5" width="240" height="126.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8Dj-r6-EtZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="ZWB-8C-dRk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXM-YN-ddb">
+                                <rect key="frame" x="30" y="302" width="354" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxK-Xg-eFX">
+                                <rect key="frame" x="30" y="337" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PFd-3f-S43"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xh-ka-apV">
+                                <rect key="frame" x="30" y="397" width="354" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vy3-D5-SYH">
+                                <rect key="frame" x="30" y="432" width="354" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didClickSubmit:" destination="au6-KS-Ine" eventType="editingDidEnd" id="K5E-uG-QCR"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-iA-uhs">
+                                <rect key="frame" x="164" y="502" width="86.5" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVD-Vb-4Hf">
+                                <rect key="frame" x="166.5" y="551" width="81" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didClickCancel:" destination="au6-KS-Ine" eventType="touchUpInside" id="NBN-PV-CxU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t1s-Ko-ZM6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2xh-ka-apV" firstAttribute="top" secondItem="hxK-Xg-eFX" secondAttribute="bottom" constant="20" id="9VS-uU-973"/>
+                            <constraint firstItem="p6B-iA-uhs" firstAttribute="top" secondItem="vy3-D5-SYH" secondAttribute="bottom" constant="30" id="HBo-E0-a73"/>
+                            <constraint firstItem="p6B-iA-uhs" firstAttribute="centerX" secondItem="rdQ-1N-qHg" secondAttribute="centerX" id="MmX-kJ-shH"/>
+                            <constraint firstItem="cVD-Vb-4Hf" firstAttribute="top" secondItem="p6B-iA-uhs" secondAttribute="bottom" constant="10" id="OFB-iq-pli"/>
+                            <constraint firstItem="INm-5p-t0v" firstAttribute="centerX" secondItem="rdQ-1N-qHg" secondAttribute="centerX" id="Phc-TF-NTs"/>
+                            <constraint firstItem="cVD-Vb-4Hf" firstAttribute="centerX" secondItem="rdQ-1N-qHg" secondAttribute="centerX" id="TQF-FU-XfR"/>
+                            <constraint firstItem="ZXM-YN-ddb" firstAttribute="top" secondItem="INm-5p-t0v" secondAttribute="bottom" constant="50" id="YdJ-ma-8vY"/>
+                            <constraint firstItem="2xh-ka-apV" firstAttribute="leading" secondItem="ZXM-YN-ddb" secondAttribute="leading" id="ex7-GX-7hQ"/>
+                            <constraint firstItem="hxK-Xg-eFX" firstAttribute="top" secondItem="ZXM-YN-ddb" secondAttribute="bottom" constant="10" id="f4E-2W-itA"/>
+                            <constraint firstItem="vy3-D5-SYH" firstAttribute="trailing" secondItem="ZXM-YN-ddb" secondAttribute="trailing" id="fU3-8P-SJJ"/>
+                            <constraint firstItem="ZXM-YN-ddb" firstAttribute="leading" secondItem="t1s-Ko-ZM6" secondAttribute="leading" constant="30" id="gwo-Uy-oo9"/>
+                            <constraint firstItem="vy3-D5-SYH" firstAttribute="height" secondItem="hxK-Xg-eFX" secondAttribute="height" id="jOV-4Z-9oE"/>
+                            <constraint firstItem="INm-5p-t0v" firstAttribute="top" secondItem="t1s-Ko-ZM6" secondAttribute="top" constant="80" id="nJG-1g-k0m"/>
+                            <constraint firstItem="vy3-D5-SYH" firstAttribute="leading" secondItem="ZXM-YN-ddb" secondAttribute="leading" id="qBd-tZ-bCe"/>
+                            <constraint firstItem="t1s-Ko-ZM6" firstAttribute="trailing" secondItem="hxK-Xg-eFX" secondAttribute="trailing" constant="30" id="rUw-Bi-fvm"/>
+                            <constraint firstItem="vy3-D5-SYH" firstAttribute="top" secondItem="2xh-ka-apV" secondAttribute="bottom" constant="10" id="rns-R1-2nl"/>
+                            <constraint firstItem="hxK-Xg-eFX" firstAttribute="leading" secondItem="ZXM-YN-ddb" secondAttribute="leading" id="v5g-p0-OmW"/>
+                            <constraint firstItem="t1s-Ko-ZM6" firstAttribute="trailing" secondItem="ZXM-YN-ddb" secondAttribute="trailing" constant="30" id="wpg-hf-nIA"/>
+                            <constraint firstItem="2xh-ka-apV" firstAttribute="trailing" secondItem="ZXM-YN-ddb" secondAttribute="trailing" id="ywV-jm-eSO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtLatitude" destination="hxK-Xg-eFX" id="zBx-Bz-465"/>
+                        <outlet property="txtLongitude" destination="vy3-D5-SYH" id="li9-VN-cKQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oV1-QK-Jz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2702.898550724638" y="65.625"/>
         </scene>
     </scenes>
     <resources>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
