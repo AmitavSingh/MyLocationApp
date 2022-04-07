@@ -31,6 +31,7 @@ class LocationListViewController: UIViewController {
     }
     
     @IBAction func didClickEnterLocation(_ sender: Any) {
+        
         if let locationCaptureVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationCaptureViewController") as? LocationCaptureViewController{
             self.navigationController?.pushViewController(locationCaptureVC, animated: true)
         }
@@ -55,6 +56,16 @@ extension LocationListViewController: UITableViewDataSource, UITableViewDelegate
         let cell =  tableView.dequeueReusableCell(withIdentifier: "LocationCellTableViewCell", for: indexPath) as! LocationCellTableViewCell
         cell.inflateWithDetails(location: (locations?[indexPath.row])!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print((locations?[indexPath.row])!)
+        guard let url = URL(string: "wikipedia-official://") else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
 }
