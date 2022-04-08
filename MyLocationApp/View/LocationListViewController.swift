@@ -12,6 +12,7 @@ class LocationListViewController: UIViewController {
     let locationViewModel: LocationsViewModel = LocationsViewModel()
     var locations: [Location]?
     @IBOutlet weak var tableView: UITableView!
+    let deepLinkUrl:String = "wikipedia-official://places"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +60,22 @@ extension LocationListViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print((locations?[indexPath.row])!)
-        guard let url = URL(string: "wikipedia-official://") else {
+        let selectedLocation = (locations?[indexPath.row])!
+        print(selectedLocation)
+        
+        let queryItems = [URLQueryItem(name: "latitude", value: "\(selectedLocation.lat)" ),
+                          URLQueryItem(name: "longitude", value: "\(selectedLocation.long)")]
+        
+        guard var urlComponent = URLComponents(string: deepLinkUrl) else {
             return
         }
-        if UIApplication.shared.canOpenURL(url){
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
+        urlComponent.queryItems = queryItems
+        if UIApplication.shared.canOpenURL(urlComponent.url!){
+            UIApplication.shared.open(urlComponent.url!, options: [:], completionHandler: nil)
+        }else{
+            //Show Error Message
+            openAlert(title: "Error", message: "Failed to open url", alertStyle: .alert, actionTitles:  ["Okay"], actionStyles: [.default], actions: [{_ in }])
         }
     }
     

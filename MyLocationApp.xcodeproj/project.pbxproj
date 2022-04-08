@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177C08D028006FDB00ECE9CC /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08CF28006FDB00ECE9CC /* UIAlertControllerExtension.swift */; };
 		17A8019827FCA04700132340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019727FCA04700132340 /* AppDelegate.swift */; };
 		17A8019A27FCA04700132340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019927FCA04700132340 /* SceneDelegate.swift */; };
 		17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019B27FCA04700132340 /* LocationListViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177C08CF28006FDB00ECE9CC /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		17A8019427FCA04700132340 /* MyLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A8019727FCA04700132340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A8019927FCA04700132340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177C08CE28006FC200ECE9CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				177C08CF28006FDB00ECE9CC /* UIAlertControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		17A8018B27FCA04700132340 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		17A8019627FCA04700132340 /* MyLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				177C08CE28006FC200ECE9CC /* Extensions */,
 				17A801D327FD9DBD00132340 /* Cell */,
 				17A801CA27FCC8B600132340 /* Network */,
 				17A801C927FCC5E800132340 /* Model */,
@@ -332,6 +343,7 @@
 				17A801CF27FCCBB800132340 /* LocationResponse.swift in Sources */,
 				17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */,
 				17A8019827FCA04700132340 /* AppDelegate.swift in Sources */,
+				177C08D028006FDB00ECE9CC /* UIAlertControllerExtension.swift in Sources */,
 				17A8019A27FCA04700132340 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
