@@ -4,58 +4,75 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="LocationCellTableViewCell" customModule="MyLocationApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="432" height="109"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="LocationCellTableViewCell" customModule="MyLocationApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="432" height="109"/>
+                <rect key="frame" x="0.0" y="0.0" width="448" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dFY-kA-nhj" userLabel="LocationNameStackView">
-                        <rect key="frame" x="142" y="15" width="148.5" height="27.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUn-Mk-TLb" userLabel="BackgroundView">
+                        <rect key="frame" x="10" y="10" width="428" height="90"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTK-7E-L2S">
-                                <rect key="frame" x="0.0" y="0.0" width="108" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGK-0s-SeC">
-                                <rect key="frame" x="118" y="0.0" width="30.5" height="27.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dFY-kA-nhj" userLabel="LocationNameStackView">
+                                <rect key="frame" x="20" y="10" width="148.5" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTK-7E-L2S">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGK-0s-SeC">
+                                        <rect key="frame" x="118" y="0.0" width="30.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelCordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRQ-8y-m2m">
+                                <rect key="frame" x="20" y="52.5" width="116.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                    </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelCordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRQ-8y-m2m">
-                        <rect key="frame" x="10" y="50.5" width="412" height="48.5"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dFY-kA-nhj" firstAttribute="leading" secondItem="tUn-Mk-TLb" secondAttribute="leading" constant="20" id="8zZ-5K-Ti9"/>
+                            <constraint firstAttribute="bottom" secondItem="ZRQ-8y-m2m" secondAttribute="bottom" constant="10" id="LtS-RV-ykR"/>
+                            <constraint firstItem="dFY-kA-nhj" firstAttribute="top" secondItem="tUn-Mk-TLb" secondAttribute="top" constant="10" id="WzB-Zn-3ys"/>
+                            <constraint firstItem="ZRQ-8y-m2m" firstAttribute="leading" secondItem="tUn-Mk-TLb" secondAttribute="leading" constant="20" id="fUU-4m-Zis"/>
+                            <constraint firstItem="ZRQ-8y-m2m" firstAttribute="top" secondItem="dFY-kA-nhj" secondAttribute="bottom" constant="15" id="jjp-XG-5O4"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ZRQ-8y-m2m" secondAttribute="trailing" constant="10" id="2J2-XI-aEl"/>
-                    <constraint firstItem="ZRQ-8y-m2m" firstAttribute="top" secondItem="dFY-kA-nhj" secondAttribute="bottom" constant="8" id="52p-fW-cha"/>
-                    <constraint firstItem="dFY-kA-nhj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="NP5-Xu-fRc"/>
-                    <constraint firstAttribute="bottom" secondItem="ZRQ-8y-m2m" secondAttribute="bottom" constant="10" id="QHF-jA-DfW"/>
-                    <constraint firstItem="ZRQ-8y-m2m" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="WvB-ai-LRt"/>
-                    <constraint firstItem="dFY-kA-nhj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="mtW-Af-3PT"/>
-                    <constraint firstItem="ZRQ-8y-m2m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yuo-fm-9bk"/>
+                    <constraint firstItem="tUn-Mk-TLb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="97a-Ps-fnC"/>
+                    <constraint firstAttribute="bottom" secondItem="tUn-Mk-TLb" secondAttribute="bottom" constant="10" id="9JR-3E-zqT"/>
+                    <constraint firstItem="tUn-Mk-TLb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GB5-ek-EDF"/>
+                    <constraint firstAttribute="trailing" secondItem="tUn-Mk-TLb" secondAttribute="trailing" constant="10" id="RBZ-2E-fc1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cardView" destination="tUn-Mk-TLb" id="vgy-C3-dkt"/>
                 <outlet property="lblCordinates" destination="ZRQ-8y-m2m" id="Lxz-hO-UCx"/>
                 <outlet property="lblLocationName" destination="KGK-0s-SeC" id="n6h-4y-YAn"/>
             </connections>
-            <point key="canvasLocation" x="143.47826086956522" y="-108.81696428571428"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-215.625"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

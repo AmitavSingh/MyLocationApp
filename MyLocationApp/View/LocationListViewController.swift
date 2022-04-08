@@ -12,7 +12,6 @@ class LocationListViewController: UIViewController {
     let locationViewModel: LocationsViewModel = LocationsViewModel()
     var locations: [Location]?
     @IBOutlet weak var tableView: UITableView!
-    let deepLinkUrl:String = "wikipedia-official://places"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +55,8 @@ extension LocationListViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "LocationCellTableViewCell", for: indexPath) as! LocationCellTableViewCell
         cell.inflateWithDetails(location: (locations?[indexPath.row])!)
+        cell.backgroundView?.layer.cornerRadius = 8
+        cell.backgroundView?.clipsToBounds = true
         return cell
     }
     
@@ -66,7 +67,7 @@ extension LocationListViewController: UITableViewDataSource, UITableViewDelegate
         let queryItems = [URLQueryItem(name: "latitude", value: "\(selectedLocation.lat)" ),
                           URLQueryItem(name: "longitude", value: "\(selectedLocation.long)")]
         
-        guard var urlComponent = URLComponents(string: deepLinkUrl) else {
+        guard var urlComponent = URLComponents(string: AppConstants.WIKIPEDIA_DEEP_LINK_URL) else {
             return
         }
         

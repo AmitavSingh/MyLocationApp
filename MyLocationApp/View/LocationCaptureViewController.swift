@@ -17,6 +17,7 @@ class LocationCaptureViewController: UIViewController {
         
         self.title = "Enter Location"
         self.navigationItem.setHidesBackButton(true, animated: true)
+        self.hideKeyboardWhenTappedAround()
 
     }
     
@@ -27,6 +28,8 @@ class LocationCaptureViewController: UIViewController {
                 self.showErrorMessage(errorMessage: "Please enter latitude")
             }else if longitude.isEmpty {
                 self.showErrorMessage(errorMessage: "Please enter longitude")
+            }else{
+                self.openURLWithTheCordinates(latitude: Double(latitude) ?? 0.0, longitude: Double(longitude) ?? 0.0)
             }
         }else{
             self.showErrorMessage(errorMessage: "Please enter the location")
@@ -42,5 +45,22 @@ class LocationCaptureViewController: UIViewController {
 extension LocationCaptureViewController{
     func showErrorMessage(errorMessage: String){
         openAlert(title: "Alert", message: errorMessage, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+    }
+    
+    func openURLWithTheCordinates(latitude: Double, longitude: Double){
+        let queryItems = [URLQueryItem(name: "latitude", value: "\(latitude)" ),
+                          URLQueryItem(name: "longitude", value: "\(longitude)")]
+        
+        guard var urlComponent = URLComponents(string: AppConstants.WIKIPEDIA_DEEP_LINK_URL) else {
+            return
+        }
+        
+        urlComponent.queryItems = queryItems
+        if UIApplication.shared.canOpenURL(urlComponent.url!){
+            UIApplication.shared.open(urlComponent.url!, options: [:], completionHandler: nil)
+        }else{
+            //Show Error Message
+            openAlert(title: "Error", message: "Failed to open url", alertStyle: .alert, actionTitles:  ["Okay"], actionStyles: [.default], actions: [{_ in }])
+        }
     }
 }

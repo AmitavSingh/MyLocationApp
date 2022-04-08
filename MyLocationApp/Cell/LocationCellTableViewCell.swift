@@ -12,10 +12,16 @@ class LocationCellTableViewCell: UITableViewCell {
    
     @IBOutlet weak var lblLocationName: UILabel!
     @IBOutlet weak var lblCordinates: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cardView.layer.shadowColor = UIColor.gray.cgColor
+        cardView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        cardView.layer.shadowOpacity = 1.0
+        cardView.layer.masksToBounds = false
+        cardView.layer.cornerRadius = 5.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,7 +29,11 @@ class LocationCellTableViewCell: UITableViewCell {
     }
     
     func inflateWithDetails(location: Location) {
-        lblLocationName.text = location.name
+        if location.name == nil {
+            lblLocationName.text = "Unknown"
+        }else{
+            lblLocationName.text = location.name
+        }
         lblCordinates.text = "(Lat: \(location.lat) , Long: \(location.long))"
     }
     

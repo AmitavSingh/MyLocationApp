@@ -11,7 +11,7 @@ class HttpUtility
 {
     func getLocations(completionHandler: @escaping (LocationResponse?) -> ()) {
 
-        let locationsApiUrl = URL(string: "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json")!
+        let locationsApiUrl = URL(string: AppConstants.LOCATION_API_URL)!
 
         URLSession.shared.dataTask(with: locationsApiUrl) { (data, response, error) in
             if(error == nil && data != nil)
@@ -22,6 +22,8 @@ class HttpUtility
                 } catch let error {
                     debugPrint(error)
                 }
+            }else{
+                print(error!)
             }
         }.resume()
     }

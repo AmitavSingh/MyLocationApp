@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-A0-qZl">
-                                <rect key="frame" x="90" y="798" width="234.5" height="39"/>
+                                <rect key="frame" x="90" y="773" width="234.5" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Enter Location Manually">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
@@ -26,8 +26,8 @@
                                     <action selector="didClickEnterLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHu-y4-2yO"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KpL-Py-LSy">
-                                <rect key="frame" x="0.0" y="88" width="414" height="700"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KpL-Py-LSy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
@@ -37,9 +37,9 @@
                         <constraints>
                             <constraint firstItem="bvv-A0-qZl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRw-it-LLi"/>
                             <constraint firstItem="KpL-Py-LSy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hep-lj-bbJ"/>
-                            <constraint firstItem="bvv-A0-qZl" firstAttribute="top" secondItem="KpL-Py-LSy" secondAttribute="bottom" constant="10" id="VK4-7f-0y5"/>
                             <constraint firstItem="KpL-Py-LSy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWB-90-QeX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bvv-A0-qZl" secondAttribute="bottom" constant="25" id="yaq-iE-lIc"/>
+                            <constraint firstItem="bvv-A0-qZl" firstAttribute="top" secondItem="KpL-Py-LSy" secondAttribute="bottom" constant="15" id="xSb-6g-ilv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bvv-A0-qZl" secondAttribute="bottom" constant="50" id="yaq-iE-lIc"/>
                             <constraint firstItem="KpL-Py-LSy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yyf-ex-5iX"/>
                         </constraints>
                     </view>
@@ -97,7 +97,7 @@
                                     <constraint firstAttribute="height" constant="40" id="PFd-3f-S43"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xh-ka-apV">
                                 <rect key="frame" x="30" y="397" width="354" height="25"/>
@@ -108,7 +108,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vy3-D5-SYH">
                                 <rect key="frame" x="30" y="432" width="354" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="didClickSubmit:" destination="au6-KS-Ine" eventType="editingDidEnd" id="K5E-uG-QCR"/>
                                 </connections>
