@@ -30,8 +30,7 @@ class LocationListViewController: UIViewController {
         locationViewModel.getLocationList()
     }
     
-    @IBAction func didClickEnterLocation(_ sender: Any) {
-        
+    @IBAction func didUserClickEnterLocation(_ sender: UIButton) {
         if let locationCaptureVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationCaptureViewController") as? LocationCaptureViewController{
             self.navigationController?.pushViewController(locationCaptureVC, animated: true)
         }

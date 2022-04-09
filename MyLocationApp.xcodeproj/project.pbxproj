@@ -10,6 +10,7 @@
 		177C08D028006FDB00ECE9CC /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08CF28006FDB00ECE9CC /* UIAlertControllerExtension.swift */; };
 		177C08D2280077D300ECE9CC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08D1280077D300ECE9CC /* UIViewControllerExtension.swift */; };
 		177C08D528007A9500ECE9CC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08D428007A9500ECE9CC /* AppConstants.swift */; };
+		177C08D92801B7FD00ECE9CC /* LocationCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08D82801B7FC00ECE9CC /* LocationCaptureViewModel.swift */; };
 		17A8019827FCA04700132340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019727FCA04700132340 /* AppDelegate.swift */; };
 		17A8019A27FCA04700132340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019927FCA04700132340 /* SceneDelegate.swift */; };
 		17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8019B27FCA04700132340 /* LocationListViewController.swift */; };
@@ -48,6 +49,7 @@
 		177C08CF28006FDB00ECE9CC /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		177C08D1280077D300ECE9CC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		177C08D428007A9500ECE9CC /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		177C08D82801B7FC00ECE9CC /* LocationCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCaptureViewModel.swift; sourceTree = "<group>"; };
 		17A8019427FCA04700132340 /* MyLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A8019727FCA04700132340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A8019927FCA04700132340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				17A801D027FCCF4200132340 /* LocationsViewModel.swift */,
+				177C08D82801B7FC00ECE9CC /* LocationCaptureViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				177C08D528007A9500ECE9CC /* AppConstants.swift in Sources */,
 				17A801E127FDE26F00132340 /* LocationCaptureViewController.swift in Sources */,
 				17A801D627FD9E0800132340 /* LocationCellTableViewCell.swift in Sources */,
+				177C08D92801B7FD00ECE9CC /* LocationCaptureViewModel.swift in Sources */,
 				17A801CF27FCCBB800132340 /* LocationResponse.swift in Sources */,
 				17A8019C27FCA04700132340 /* LocationListViewController.swift in Sources */,
 				17A8019827FCA04700132340 /* AppDelegate.swift in Sources */,

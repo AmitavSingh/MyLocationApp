@@ -23,7 +23,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didClickEnterLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHu-y4-2yO"/>
+                                    <action selector="didUserClickEnterLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bT0-hO-tLE"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KpL-Py-LSy">
@@ -109,9 +109,6 @@
                                 <rect key="frame" x="30" y="432" width="354" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="didClickSubmit:" destination="au6-KS-Ine" eventType="editingDidEnd" id="K5E-uG-QCR"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-iA-uhs">
                                 <rect key="frame" x="164" y="502" width="86.5" height="39"/>
@@ -120,7 +117,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didClickSubmit:" destination="au6-KS-Ine" eventType="touchUpInside" id="Fws-xL-nR2"/>
+                                    <action selector="didUserClickSubmit:" destination="au6-KS-Ine" eventType="touchUpInside" id="5if-rr-kbN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVD-Vb-4Hf">
@@ -130,7 +127,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didClickCancel:" destination="au6-KS-Ine" eventType="touchUpInside" id="NBN-PV-CxU"/>
+                                    <action selector="didUserClickCancel:" destination="au6-KS-Ine" eventType="touchUpInside" id="HsW-fR-DnW"/>
                                 </connections>
                             </button>
                         </subviews>

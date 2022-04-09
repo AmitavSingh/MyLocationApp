@@ -11,6 +11,8 @@ class LocationCaptureViewController: UIViewController {
 
     @IBOutlet weak var txtLatitude: UITextField!
     @IBOutlet weak var txtLongitude: UITextField!
+    let locationCaptureViewModel: LocationCaptureViewModel = LocationCaptureViewModel()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,25 +20,17 @@ class LocationCaptureViewController: UIViewController {
         self.title = "Enter Location"
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.hideKeyboardWhenTappedAround()
+        locationCaptureViewModel.delegate = self
 
     }
     
-    @IBAction func didClickSubmit(_ sender: Any) {
+    @IBAction func didUserClickSubmit(_ sender: UIButton) {
         
-        if let latitude = txtLatitude.text, let longitude = txtLongitude.text {
-            if latitude.isEmpty {
-                self.showErrorMessage(errorMessage: "Please enter latitude")
-            }else if longitude.isEmpty {
-                self.showErrorMessage(errorMessage: "Please enter longitude")
-            }else{
-                self.openURLWithTheCordinates(latitude: Double(latitude) ?? 0.0, longitude: Double(longitude) ?? 0.0)
-            }
-        }else{
-            self.showErrorMessage(errorMessage: "Please enter the location")
-        }
+        locationCaptureViewModel.validateUserInput(latitude: txtLatitude.text!, longitude: txtLongitude.text!)
+        
     }
     
-    @IBAction func didClickCancel(_ sender: Any) {
+    @IBAction func didUserClickCancel(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -63,4 +57,16 @@ extension LocationCaptureViewController{
             openAlert(title: "Error", message: "Failed to open url", alertStyle: .alert, actionTitles:  ["Okay"], actionStyles: [.default], actions: [{_ in }])
         }
     }
+}
+
+extension LocationCaptureViewController: LocationCaptureDelegate{
+    func didCaptureLocation(latitude: Double, longitude: Double) {
+        openURLWithTheCordinates(latitude: latitude, longitude: longitude)
+    }
+    
+    func onFailure(errorMessage: String) {
+        self.showErrorMessage(errorMessage: errorMessage)
+    }
+    
+    
 }
