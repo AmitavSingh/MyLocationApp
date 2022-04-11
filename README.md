@@ -1,5 +1,5 @@
 # MyLocationApp
-Creating a Demo app to fetch locations from API and display them in a tableview.
+Creating a Demo app to fetch locations from API, Display them in a tableview and connect Wikipedia App via deep linking.
 
 1. Created an App to fetch list of locations from API and load the data in a TableView on LocationListViewController.
 2. Followed MVVM Architecture pattern for development.
