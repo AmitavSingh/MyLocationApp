@@ -9,6 +9,7 @@ import Foundation
 
 struct LocationResponse: Decodable {
     let locations: [Location]
+    let errorMessage: String?
 }
 
 struct Location: Decodable {

@@ -18,7 +18,7 @@ class LocationCaptureViewModel
     
     func validateUserInput(latitude: String, longitude:String){
         if latitude.isEmpty {
-            delegate?.onFailure(errorMessage: "Please enter latitude")
+            delegate?.onFailure(errorMessage: "Please enter latitude.")
         }else if longitude.isEmpty {
             delegate?.onFailure(errorMessage: "Please enter longitude.")
         }else{

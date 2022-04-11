@@ -23,7 +23,7 @@ class HttpUtility
                     debugPrint(error)
                 }
             }else{
-                print(error!)
+                debugPrint(error!)
             }
         }.resume()
     }
